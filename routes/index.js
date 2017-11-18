@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 router.post('/save', function (req,res) {
 var bigurl = req.body.bigurl;
 
-        client.set('URL', bigurl, function (err, reply) {
+        client.lpush('trending', bigurl, function (err, reply) {
             console.log(reply);
         });
 
@@ -19,12 +19,21 @@ var bigurl = req.body.bigurl;
 
 });
 
-router.post('/geturl', function (req,res) {
+router.get('/items', function (req,res) {
 
-    client.get('URL', function(err, reply) {
-        console.log(reply);
-        res.send(reply);
-    });
-})
+    //client.lrange('urls', 0, 10);
+    client.lrange('trending', 0, 4, function (err, result) {
+        if(err){
+            throw err;
+        } else {
+            obj = {index: result};
+            console.log(JSON.stringify(obj));
+            res.render('index', obj);
+        }
+        });
+
+
+
+});
 
 module.exports = router;

@@ -18,6 +18,12 @@ client.on('connect', function() {
     console.log('connected');
 });
 
+client.keys('*', function (keys) {
+    for (key in keys) {
+        console.log(key);
+    }
+});
+
 
 
 // view engine setup
