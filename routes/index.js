@@ -10,11 +10,13 @@ router.get('/', function(req, res, next) {
 
 router.post('/save', function (req,res) {
 var bigurl = req.body.bigurl;
-    client.connect(process.env.REDIS_URL, function(err, client, done) {
+
         client.set('URL', bigurl, function (err, reply) {
             console.log(reply);
         });
-    });
+
+        res.send('Successfully saved to Redis');
+
 });
 
 router.post('/geturl', function (req,res) {
