@@ -14,5 +14,19 @@
     "morgan": "~1.9.0",
     "redis": "^2.8.0",
     "serve-favicon": "~2.4.5"
-  }
+  },
+  "description": "\"# Hackethon\"",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/desusaiteja/Hackethon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/desusaiteja/Hackethon/issues"
+  },
+  "homepage": "https://github.com/desusaiteja/Hackethon#readme"
 }

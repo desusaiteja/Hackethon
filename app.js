@@ -5,13 +5,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var redis = require('redis');
-var client = redis.createClient();
+var client = redis.createClient(process.env.REDIS_URL);
 var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
 
-
+app.set('port', (process.env.PORT || 9999));
 
 
 client.on('connect', function() {
@@ -51,6 +51,10 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+app.listen(app.get('port'), function() {
+    console.log('Node app is running on port', app.get('port'));
 });
 
 module.exports = app;
