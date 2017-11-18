@@ -1,30 +1,66 @@
 <!DOCTYPE html>
-<html>
+<div>
   <head>
+    <div>
     <title>Spartans</title>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    </div>
   </head>
   <body>
+  <div class="img">
+  <a href="/" >
+    <img  src="/index.jpg">
+  </a>
+    <h2 class="head1"></h2>
+  </div>
 
 
-  <h1>Spartans</h1>
+
+
+
+
+  <div class="jumbotron text-center">
     <div>
       <form method="post" action="/save">
         <div>
-          <label for="bigurl">
-            <h3>Enter Big URL:</h3>
-            <textarea name="bigurl" id="bigurl" cols="60" rows="7">Enter Big URL</textarea>
-          </label>
-        </div>
-        <input type="submit" value="save" />
-        <div>
-          <h3>Short URL:</h3>
-          <textarea name="shorturl" id="shorturl" cols="60" rows="7">You'll get shorter one here...</textarea>
+          <tbody>
+          <div>
+          <tr>
+            <td>
+              <label for="bigurl">Enter Big URL:</label>
+            </td>
+            <td>
+              <input type="textarea" id="bigurl" cols="60" rows="3" name="bigurl">
+            </td>
+          </tr>
+          </div>
+          <div class="divstyle">
+          <tr>
+            <td>
+              <label>Shoreter URL:</label>
+            </td>
+            <td>
+              <input type="textarea" id="shorturl" cols="60" rows="3" name="shorturl">
+            </td>
+          </tr>
+          </div>
+
+          </tbody>
+
 
         </div>
+        <div class="subbtn">
+            <input type="submit" value="submit" />
+          </div>
       </form>
     </div>
-  <div>
+  </div>
+    <div>
+
     <h2>Trending URLs:</h2>
     <div>
       <tbody>
@@ -37,9 +73,8 @@
       </tbody>
     </div>
   </div>
-    <div>
-    </div>
 
+  </body>
 
 
   </body>
