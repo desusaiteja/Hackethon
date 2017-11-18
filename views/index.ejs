@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <div>
+      <form method="post" action="/save">
+        <div>
+          <label for="bigurl">
+            <h3>Enter Big URL:</h3>
+            <textarea name="bigurl" id="bigurl" cols="60" rows="7">Enter Big URL</textarea>
+          </label>
+        </div>
+        <input type="submit" value="save" />
+        <div>
+          <h3>Short URL:</h3>
+          <textarea name="shorturl" id="shorturl" cols="60" rows="7">You'll get shorter one here...</textarea>
+        </div>
+      </form>
+    </div>
+  <div>
+    <h2>Trending URLs:</h2>
+    <form method="post" action="/geturl">
+    <p id="#1">URL#1</p>
+    <p id="#2">URL#2</p>
+    <p id="#3">URL#3</p>
+    <p id="#4">URL#4</p>
+    <p id="#5">URL#5</p>
+    </form>
+  </div>
+  </body>
+</html>
